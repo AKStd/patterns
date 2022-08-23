@@ -19,8 +19,8 @@ class Line:
 
 # код ниже руками не трогать:
 coords = sys.stdin.read().split()
-line1 = Line(Point(coords[0], coords[1]),
-             Point(coords[2], coords[3]))
+line1 = Line(Point(int(coords[0]), int(coords[1])),
+             Point(int(coords[2]), int(coords[3])))
 line2 = line1.deep_copy()
 line1.start.x = line1.end.x = line1.start.y = line1.end.y = 0
 
