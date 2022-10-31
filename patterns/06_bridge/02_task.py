@@ -2,24 +2,24 @@ from abc import ABC
 
 
 class Shape:
-    def __init__(self, render: 'Renderer'):
+    def __init__(self, render: "Renderer"):
         self.name = None
         self.render = render
 
     def __str__(self):
-        return f'Drawing {self.name} as {self.render.what_to_render_as}'
+        return f"Drawing {self.name} as {self.render.what_to_render_as}"
 
 
 class Triangle(Shape):
-    def __init__(self, render: 'Renderer'):
+    def __init__(self, render: "Renderer"):
         super().__init__(render)
-        self.name = 'Triangle'
+        self.name = "Triangle"
 
 
 class Square(Shape):
-    def __init__(self, render: 'Renderer'):
+    def __init__(self, render: "Renderer"):
         super().__init__(render)
-        self.name = 'Square'
+        self.name = "Square"
 
 
 class Renderer(ABC):
@@ -32,17 +32,15 @@ class Renderer(ABC):
 
 
 class VectorRenderer(Renderer):
-
     @property
     def what_to_render_as(self):
-        return 'lines'
+        return "lines"
 
 
 class RasterRenderer(Renderer):
-
     @property
     def what_to_render_as(self):
-        return 'pixels'
+        return "pixels"
 
 
 # TODO: reimplement Shape, Square, Triangle and Renderer/VectorRenderer/RasterRenderer
@@ -51,4 +49,4 @@ class RasterRenderer(Renderer):
 sq = Square(VectorRenderer())
 tr = Triangle(RasterRenderer())
 
-print(f'{str(sq)} {str(tr)}')
+print(f"{str(sq)} {str(tr)}")

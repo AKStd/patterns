@@ -5,7 +5,7 @@ class Point:
 
 
 def draw_point(p):
-    print('.', end='')
+    print(".", end="")
 
 
 class Line:
@@ -32,8 +32,7 @@ class LineToPointAdapter:
             return
 
         super().__init__()
-        print(f'[{line.start.x}, {line.start.y}]->'
-              f'{line.end.x}, {line.end.y}')
+        print(f"[{line.start.x}, {line.start.y}]->" f"{line.end.x}, {line.end.y}")
         left = min(line.start.x, line.end.y)
         right = max(line.start.x, line.start.y)
         top = max(line.start.y, line.end.y)
@@ -61,10 +60,7 @@ def draw(rcs):
                 draw_point(p)
 
 
-if __name__ == '__main__':
-    rs = [
-        Rectangle(1, 1, 10, 10),
-        Rectangle(3, 3, 6, 6)
-    ]
+if __name__ == "__main__":
+    rs = [Rectangle(1, 1, 10, 10), Rectangle(3, 3, 6, 6)]
     draw(rs)
     draw(rs)

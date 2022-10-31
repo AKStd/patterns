@@ -50,7 +50,6 @@ class IncreaseDefense(CreatureModifier):
 
 
 class NoBonusesModifier(CreatureModifier):
-
     def handle(self):
         print("No bonuses for you!")
 

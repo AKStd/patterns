@@ -30,9 +30,7 @@ class User2:
 
 def random_string() -> str:
     chars: str = string.ascii_lowercase
-    return "".join(
-        [random.choice(chars) for _ in range(8)]
-    )
+    return "".join([random.choice(chars) for _ in range(8)])
 
 
 if __name__ == "__main__":

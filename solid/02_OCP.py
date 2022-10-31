@@ -74,6 +74,7 @@ class BetterFilter(Filter):
 
 # Combinator
 
+
 class AndSpecification(Specification):
     def __init__(self, args):
         self.args = args

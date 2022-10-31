@@ -8,7 +8,7 @@ class Address:
         self.suite = suite
 
     def __str__(self):
-        return f'{self.street_address}, {self.city}, {self.suite}'
+        return f"{self.street_address}, {self.city}, {self.suite}"
 
 
 class Employee:
@@ -17,12 +17,12 @@ class Employee:
         self.address = address
 
     def __str__(self) -> str:
-        return f'{self.name} works at {self.address}'
+        return f"{self.name} works at {self.address}"
 
 
 class EmployeeFactory:
-    main_office_employee = Employee('', Address('123 East Dr', 'London', 0))
-    aux_office_employee = Employee('', Address('123B East Dr', 'London', 0))
+    main_office_employee = Employee("", Address("123 East Dr", "London", 0))
+    aux_office_employee = Employee("", Address("123B East Dr", "London", 0))
 
     @staticmethod
     def __new_employee(prototype: Employee, name: str, suite: int) -> Employee:
@@ -44,8 +44,8 @@ class EmployeeFactory:
         )
 
 
-john = EmployeeFactory.new_main_office_employee('John', 101)
-jane = EmployeeFactory.new_aux_office_employee('Jane', 123)
+john = EmployeeFactory.new_main_office_employee("John", 101)
+jane = EmployeeFactory.new_aux_office_employee("Jane", 123)
 
 print(john)
 print(jane)

@@ -32,6 +32,6 @@ res1 = calculate_area(adapter)
 sq.side = int(y)
 res2 = calculate_area(adapter)
 
-print(f'{res1} {res2}')
+print(f"{res1} {res2}")
 
-print(f'{res1} {res2}')
+print(f"{res1} {res2}")

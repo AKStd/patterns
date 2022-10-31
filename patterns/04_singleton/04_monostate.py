@@ -1,8 +1,5 @@
 class CEO:
-    __shared_state = {
-        'name': 'Steve',
-        'age': 55
-    }
+    __shared_state = {"name": "Steve", "age": 55}
 
     def __init__(self):
         self.__dict__ = self.__shared_state
@@ -22,14 +19,14 @@ class Monostate:
 
 class CFO(Monostate):
     def __init__(self):
-        self.name = ''
+        self.name = ""
         self.money_managed = 0
 
     def __str__(self):
-        return f'{self.name} manages {self.money_managed}$'
+        return f"{self.name} manages {self.money_managed}$"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # ceo1 = CEO()
     # print(ceo1)
     #
@@ -39,11 +36,11 @@ if __name__ == '__main__':
     # print(ceo1)
     # print(ceo2)
     cfo1 = CFO()
-    cfo1.name = 'Sheryl'
+    cfo1.name = "Sheryl"
     cfo1.money_managed = 1
     print(cfo1)
     cfo2 = CFO()
-    cfo1.name = 'Ruth'
+    cfo1.name = "Ruth"
     cfo1.money_managed = 10
     print(cfo1)
     print(cfo2)

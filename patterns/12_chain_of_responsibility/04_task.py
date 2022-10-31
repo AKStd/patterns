@@ -42,15 +42,21 @@ class CreatureModifier(ABC):
 
 class JoinDefenderModifier(CreatureModifier):
     def handle(self, sender, query):
-        if (isinstance(sender, Goblin) and sender is not self.creature and
-                query.what_to_query == WhatToQuery.DEFENSE):
+        if (
+            isinstance(sender, Goblin)
+            and sender is not self.creature
+            and query.what_to_query == WhatToQuery.DEFENSE
+        ):
             query.value += 1
 
 
 class KingAttackModifier(CreatureModifier):
     def handle(self, sender, query):
-        if (isinstance(sender, Goblin) and sender is not self.creature and
-                query.what_to_query == WhatToQuery.ATTACK):
+        if (
+            isinstance(sender, Goblin)
+            and sender is not self.creature
+            and query.what_to_query == WhatToQuery.ATTACK
+        ):
             query.value += 1
 
 
@@ -74,7 +80,7 @@ class Creature:
         return q.value
 
     def __str__(self) -> str:
-        return f'{self.name} ({self.attack}/{self.defense})'
+        return f"{self.name} ({self.attack}/{self.defense})"
 
 
 class Goblin(Creature):
@@ -91,13 +97,13 @@ class GoblinKing(Goblin):
 
 # код ниже руками не трогать
 goblins = sys.stdin.read().split()
-result = ''
+result = ""
 for g in goblins:
     _game = Game()
     goblin = None
-    goblin = Goblin(_game) if g == 'g' else GoblinKing(_game)
+    goblin = Goblin(_game) if g == "g" else GoblinKing(_game)
     _game.creatures.append(goblin)
 
-    result += f'{goblin.attack} {goblin.defense} '
+    result += f"{goblin.attack} {goblin.defense} "
 
 print(result)

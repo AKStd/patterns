@@ -26,16 +26,16 @@ class Point:
         self.y = y
 
     def __str__(self) -> str:
-        return f'x: {self.x} y: {self.y}'
+        return f"x: {self.x} y: {self.y}"
 
     class PointFactory:
-        def new_cartesian_point(self, x: float, y: float) -> 'Point':
+        def new_cartesian_point(self, x: float, y: float) -> "Point":
             point = Point()
             point.x = x
             point.y = y
             return point
 
-        def new_polar_point(self, rho: float, theta: float) -> 'Point':
+        def new_polar_point(self, rho: float, theta: float) -> "Point":
             point = Point()
             point.x = rho * cos(theta)
             point.y = rho * sin(theta)
@@ -44,7 +44,7 @@ class Point:
     factory = PointFactory()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     p = Point(2, 3)
     p2 = Point.factory.new_polar_point(1, 2)
     print(p)

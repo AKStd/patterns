@@ -8,12 +8,12 @@ class Render(ABC):
 
 class VectorRender(Render):
     def render_circle(self, radius: float):
-        print(f'Draw circle with radius {radius}')
+        print(f"Draw circle with radius {radius}")
 
 
 class RasterRender(Render):
     def render_circle(self, radius: float):
-        print(f'Draw pixels of circle with radius {radius}')
+        print(f"Draw pixels of circle with radius {radius}")
 
 
 class Shape:
@@ -39,7 +39,7 @@ class Circle(Shape):
         self.radius *= factor
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     raster = RasterRender()
     vector = VectorRender()
     circle = Circle(vector, 5)

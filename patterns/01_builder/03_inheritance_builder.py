@@ -5,7 +5,7 @@ class Person:
         self.date_of_birth = None
 
     def __str__(self):
-        return f'{self.name}, {self.position}, {self.date_of_birth}'
+        return f"{self.name}, {self.position}, {self.date_of_birth}"
 
     @staticmethod
     def new():
@@ -38,7 +38,7 @@ class PersonBirthDateBuilder(PersonJobBuilder):
         return self
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pb = PersonBirthDateBuilder()
-    me = pb.called('Adam').works_as('Developer').born('1/1/19996').build()
+    me = pb.called("Adam").works_as("Developer").born("1/1/19996").build()
     print(me.person)

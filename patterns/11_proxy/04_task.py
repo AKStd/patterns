@@ -7,15 +7,15 @@ class Person:
 
     @classmethod
     def drink(cls):
-        return 'drinking'
+        return "drinking"
 
     @classmethod
     def drive(cls):
-        return 'driving'
+        return "driving"
 
     @classmethod
     def drink_and_drive(cls):
-        return 'driving while drunk'
+        return "driving while drunk"
 
 
 class ResponsiblePerson:
@@ -36,7 +36,7 @@ class ResponsiblePerson:
 
     @classmethod
     def drink_and_drive(cls) -> str:
-        return 'dead'
+        return "dead"
 
 
 # код ниже руками не трогать
@@ -45,5 +45,5 @@ age = 10
 p = Person(age)
 rp = ResponsiblePerson(p)
 
-result = f'{rp.drive()} {rp.drink()} {rp.drink_and_drive()}'
+result = f"{rp.drive()} {rp.drink()} {rp.drink_and_drive()}"
 print(result)

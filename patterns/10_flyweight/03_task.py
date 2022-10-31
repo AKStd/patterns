@@ -33,7 +33,7 @@ class Sentence:
 
 # код ниже руками не трогать
 # sentence, index = sys.stdin.read().split(':')
-sentence, index = 'alpha beta gamma', 1
+sentence, index = "alpha beta gamma", 1
 
 s = Sentence(sentence)
 s[int(index)].capitalize = True

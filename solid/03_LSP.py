@@ -8,7 +8,7 @@ class Rectangle:
         return self._width * self._height
 
     def __str__(self):
-        return f'Rectangle width:{self._width}: height:{self._height}'
+        return f"Rectangle width:{self._width}: height:{self._height}"
 
     @property
     def width(self):
@@ -44,7 +44,7 @@ def get_area(rc: Rectangle) -> None:
     w = rc.width
     rc.height = 10
     exp = int(w * 10)
-    print(f'Got {rc.area}, expect {exp}')
+    print(f"Got {rc.area}, expect {exp}")
 
 
 rc = Rectangle(2, 3)

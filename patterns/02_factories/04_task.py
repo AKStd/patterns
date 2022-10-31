@@ -15,6 +15,8 @@ class PersonFactory:
         self.id_count += 1
         return person
         # #код ниже трогать не надо
+
+
 # names = sys.stdin.read().split(',')
 # pf = PersonFactory()
 # p1 = pf.create_person(names[0])

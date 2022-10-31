@@ -30,5 +30,5 @@ def draw_image(image: "Image"):
 
 
 if __name__ == "__main__":
-    bmp = LazyBitmap('facepalm.jpg')
+    bmp = LazyBitmap("facepalm.jpg")
     draw_image(bmp)

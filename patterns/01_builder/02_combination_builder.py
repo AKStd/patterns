@@ -10,8 +10,10 @@ class Person:
         self.annual_income = None
 
     def __str__(self) -> str:
-        return f'Address {self.street_address}, {self.post_code}, {self.city}' \
-               f'Employment ad {self.company_name} as {self.position} earning {self.annual_income}'
+        return (
+            f"Address {self.street_address}, {self.post_code}, {self.city}"
+            f"Employment ad {self.company_name} as {self.position} earning {self.annual_income}"
+        )
 
 
 class PersonBuilder:
@@ -68,5 +70,5 @@ class PersonAddressBuilder(PersonBuilder):
 
 
 pb = PersonBuilder()
-_person = pb.lives.at('EssenYurt').in_city('Istambul').build()
+_person = pb.lives.at("EssenYurt").in_city("Istambul").build()
 print(_person)

@@ -23,7 +23,6 @@ class GraphicObject:
 
 
 class Circle(GraphicObject):
-
     @property
     def name(self):
         return "Circle"

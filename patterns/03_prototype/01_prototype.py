@@ -8,7 +8,7 @@ class Address:
         self.country = country
 
     def __str__(self):
-        return f'{self.street_address}, {self.city}, {self.country}'
+        return f"{self.street_address}, {self.city}, {self.country}"
 
 
 class Person:
@@ -17,7 +17,7 @@ class Person:
         self.address = address
 
     def __str__(self) -> str:
-        return f'{self.name} lives at {self.address}'
+        return f"{self.name} lives at {self.address}"
 
 
 """
@@ -33,12 +33,11 @@ print(john)
 
 
 # copy.deepcopy()
-john = Person('John', Address('123 London Road', 'London', 'UK'))
+john = Person("John", Address("123 London Road", "London", "UK"))
 print(john)
 
 jane = copy.deepcopy(john)
-jane.name = 'Jane'
-print('---------')
+jane.name = "Jane"
+print("---------")
 print(jane)
 print(john)
-

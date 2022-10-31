@@ -17,10 +17,10 @@ class Database:
     _instance = None
 
     def __init__(self) -> None:
-        print('Loading a database from file')
+        print("Loading a database from file")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     d1 = Database()
     d2 = Database()
     print(d1 == d2)

@@ -80,7 +80,6 @@ class MultiFunctionDevice(Printer, Scanner, Fax):
 
 
 class MultiFunctionMachine(MultifunctionDevice):
-
     def __init__(self, printer, scanner, fax):
         self.printer = printer
         self.scanner = scanner

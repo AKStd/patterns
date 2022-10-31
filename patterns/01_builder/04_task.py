@@ -10,31 +10,33 @@ class CodeBuilder:
         self.root_name = root_name
         self.fields = []
 
-    def add_field(self, attr: str, value: typing.Any) -> 'CodeBuilder':
+    def add_field(self, attr: str, value: typing.Any) -> "CodeBuilder":
         self.fields.append((attr, value))
         return self
 
     def __str(self) -> str:
-        lines = [f'class {self.root_name}:', ]
+        lines = [
+            f"class {self.root_name}:",
+        ]
         func_indent = " " * self.indent_size
         if self.fields:
-            lines.append(f'{func_indent}def __init__(self):')
+            lines.append(f"{func_indent}def __init__(self):")
             for attr, value in self.fields:
                 attr_indent = " " * self.indent_size + func_indent
-                lines.append(f'{attr_indent}self.{attr} = {value}')
+                lines.append(f"{attr_indent}self.{attr} = {value}")
         else:
-            lines.append(f'{func_indent}pass')
+            lines.append(f"{func_indent}pass")
 
-        return '\n'.join(lines)
+        return "\n".join(lines)
 
     def __str__(self) -> str:
         return self.__str()
 
 
-cb = CodeBuilder('Foo')
+cb = CodeBuilder("Foo")
 print(cb)
 
-cb = CodeBuilder('Person').add_field('name', '""').add_field('age', '0')
+cb = CodeBuilder("Person").add_field("name", '""').add_field("age", "0")
 print(cb)
 
 # # код ниже руками не трогать

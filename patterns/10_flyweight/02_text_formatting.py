@@ -11,9 +11,7 @@ class FormattedText:
         result: list = []
         for i in range(len(self.plain_text)):
             c: str = self.plain_text[i]
-            result.append(
-                c.upper() if self.caps[i] else c
-            )
+            result.append(c.upper() if self.caps[i] else c)
         return "".join(result)
 
 
@@ -35,7 +33,6 @@ class BetterFormattedText:
         _range = self.TextRange(start, end)
         self.formatting.append(_range)
         return _range
-
 
     def __str__(self) -> str:
         result: list = []

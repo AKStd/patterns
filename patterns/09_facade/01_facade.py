@@ -27,8 +27,12 @@ class Console:
     def __init__(self) -> None:
         b = Buffer()
         self.current_viewport = Viewport(b)
-        self.buffers = [b, ]
-        self.viewports = [self.current_viewport, ]
+        self.buffers = [
+            b,
+        ]
+        self.viewports = [
+            self.current_viewport,
+        ]
 
     def write(self, text: str) -> None:
         self.current_viewport.append(text)

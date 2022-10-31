@@ -19,9 +19,11 @@ class Neuron(Connectable):
         self.outputs = []
 
     def __str__(self):
-        return f"{self.name}, " \
-               f"{len(self.inputs)} inputs " \
-               f"{len(self.outputs)} outputs "
+        return (
+            f"{self.name}, "
+            f"{len(self.inputs)} inputs "
+            f"{len(self.outputs)} outputs "
+        )
 
     def __iter__(self):
         yield self

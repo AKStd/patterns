@@ -39,9 +39,11 @@ class CreatureModifier(ABC):
 
 
 class DoubleAttackModified(CreatureModifier):
-
     def handle(self, sender: "Creature", query: "Query"):
-        if sender.name == self.creature.name and query.what_to_query == WhatToQuery.ATTACK:
+        if (
+            sender.name == self.creature.name
+            and query.what_to_query == WhatToQuery.ATTACK
+        ):
             query.value *= 2
 
     def __enter__(self):
@@ -76,7 +78,7 @@ class Creature:
 
 if __name__ == "__main__":
     _game = Game()
-    goblin = Creature(_game, 'Strong goblin', 2, 2)
+    goblin = Creature(_game, "Strong goblin", 2, 2)
     print(goblin)
 
     with DoubleAttackModified(_game, goblin):

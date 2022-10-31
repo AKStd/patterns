@@ -26,18 +26,18 @@ class Point:
         self.y = y
 
     def __str__(self) -> str:
-        return f'x: {self.x} y: {self.y}'
+        return f"x: {self.x} y: {self.y}"
 
     @staticmethod
-    def new_cartesian_point(x: float, y: float) -> 'Point':
+    def new_cartesian_point(x: float, y: float) -> "Point":
         return Point(x, y)
 
     @staticmethod
-    def new_polar_point(rho: float, theta: float) -> 'Point':
+    def new_polar_point(rho: float, theta: float) -> "Point":
         return Point(rho * cos(theta), rho * sin(theta))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     p = Point(2, 3)
     p2 = Point.new_polar_point(1, 2)
     print(p)

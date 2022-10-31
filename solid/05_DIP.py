@@ -25,10 +25,18 @@ class Relationships(RelationshipsBrowser):
 
     def add_parent_and_child(self, parent, child):
         self.relations.append(
-            (parent, Relation.PARENT, child,)
+            (
+                parent,
+                Relation.PARENT,
+                child,
+            )
         )
         self.relations.append(
-            (child, Relation.CHILD, parent,)
+            (
+                child,
+                Relation.CHILD,
+                parent,
+            )
         )
 
     def find_all_children_of(self, name):
@@ -45,7 +53,7 @@ class Research:
     #             print(f'John has child called {r[2].name}')
     def __init__(self, browser):
         for p in browser.find_all_children_of("John"):
-            print(f'John has child called {p.name}')
+            print(f"John has child called {p.name}")
 
 
 parent = Person("John")

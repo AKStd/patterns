@@ -1,5 +1,6 @@
 # Принцип единой ответственности
 
+
 class Journal:
     def __init__(self):
         self.entries = []
@@ -30,5 +31,5 @@ class Journal:
 class PersistenceManager:
     @staticmethod
     def save_to_file(content, filename):
-        with open(filename, 'w') as f:
+        with open(filename, "w") as f:
             f.write(str(content))

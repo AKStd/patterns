@@ -39,18 +39,18 @@ class ColoredShape:
 # код ниже руками не трогать
 shape, size, color = sys.stdin.read().split()
 
-if shape == 'c':
+if shape == "c":
     circle = ColoredShape(Circle(int(size)), color)
     result1 = str(circle)
     circle.resize(2)
     result2 = str(circle)
 
-    print(f'{result1} {result2}')
+    print(f"{result1} {result2}")
 
-if shape == 's':
+if shape == "s":
     square = ColoredShape(Square(int(size)), color)
     result1 = str(square)
     square.resize(2)
     result2 = str(square)
 
-    print(f'{result1} {result2}')
+    print(f"{result1} {result2}")
